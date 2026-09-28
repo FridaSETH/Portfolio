@@ -1,0 +1,561 @@
+/*FRAMSIDE*/
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.wordWrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.wordWrapper h3{
+    color: var(--color-accent);
+    font-weight: 800;
+}
+
+.projectsPreviewContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.projectsPreviewTitle{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:var(--color-ink) 0.5px solid;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.projectsPreviewTitle a {
+    font-family: "Overpass Mono", monospace;
+    font-style: normal;
+    color: var(--color-mute);
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projectsPreviewTitle a:hover {
+    /* opacity: 0.6; */
+    text-decoration: underline;
+}
+
+.projectsPreviewInner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 320px;
+    /* border:1px rgb(8, 0, 126) solid; */
+    overflow: hidden;
+    
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.projectCardImg{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid var(--color-ink); /* border here instead */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.projectCardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.projectCardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.projectCardCategories{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projectCardTitle{
+    color: var(--color-ink);
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 32px;
+    /* font-size: clamp(15px, 1.4vw, 20px); */
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 10px;
+    line-height: 1.15;
+}
+
+/*PROSJEKTSIDE*/
+
+.tilbakeWrapper{
+    margin-top: 30px;
+}
+
+.prosjektsideBody{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.prosjektsideBodyInner{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+}
+
+.prosjektsideBodyInnerFirst{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prosjektsideBodyInnerSecond{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*OM MEG*/
+
+
+.aboutContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 80px;
+    gap: 80px;
+}
+
+.aboutContainerFirst{
+    flex: 1 1 380px;
+    max-width: 460px;
+}
+
+.aboutContainerFirst h1{
+    margin-bottom: 12px;
+}
+
+.aboutContainerFirst p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.aboutContainerSecond{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutImg{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid var(--color-ink);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+.aboutImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.aboutContainerSecond{
+    flex: 1 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.aboutWrapper h3{
+    margin-bottom: 16px;
+}
+
+.erfaringsKort{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-ink);
+}
+
+.erfaringsKort:first-of-type{
+    border-top: 1px solid var(--color-ink);
+}
+
+.erfaringsKortBody{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/*PROSJEKTER*/
+
+.prosjekterHeader{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.prosjekterHeader h1{
+    margin-bottom: 32px;
+}
+
+.filterRow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filterChip{
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-ink);
+    background: transparent;
+    border: 1px solid var(--color-ink);
+    border-radius: 6px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filterChip:hover{
+    background-color: var(--color-ink);
+    color: var(--color-bg);
+}
+
+.filterChip.active{
+    background-color: var(--color-ink);
+    color: var(--color-bg);
+}
+
+.projectsGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px 48px;
+    margin-bottom: 100px;
+}
+
+.projectCardMeta{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Overpass Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: var(--color-mute);
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.lesMer{
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 24px;
+    color: var(--color-ink);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-ink);
+    display: inline-block;
+    width: fit-content;
+    margin-top: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.lesMer:hover{
+    opacity: 0.6;
+}
+
+/* GENERELLE */
+
+body{
+    background-color: var(--color-bg);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 5vw, 80px);
+    box-sizing: border-box;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--color-ink) 0.5px solid;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
+.navBar a {
+    font-family: "Instrument Sans", sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-ink);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navBar p {
+    font-family: "Instrument Sans", sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--color-ink);
+    font-weight: 800;
+}
+
+.navBarSecond{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navBarSecond a{
+    font-weight: 500;
+}
+
+.navBar a:hover{
+    opacity: 0.6;
+}
+
+.description{
+    color: var(--color-ink);
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.details{
+    color: var(--color-mute);
+    font-family: "Overpass Mono", monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 4px;
+}
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(48px, 6vw, 96px);
+    color: var(--color-ink);
+    margin: 0;
+}
+
+h2{
+    color: var(--color-ink);
+
+    font-family: "Instrument Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3{
+    font-family: "Overpass Mono", monospace;
+    font-style: normal;
+    color: var(--color-mute);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h4{
+    color: var(--color-ink);
+    font-family: "Instrument Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    }
+
+p{
+    font-family: "Instrument Sans", sans-serif;
+    font-style: normal;
+    color: var(--color-mute);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.underline {
+    border-bottom:var(--color-ink) 0.5px solid;
+    width: 100%;
+}
+
+:root {
+    --color-ink: #191919;
+    --color-bg: #F8F6F3;
+    --color-mute: #5D5D5D;
+    --color-accent: #c1441e;
+}
+
+/* instrument-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/instrument-sans-v4-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/instrument-sans-v4-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/instrument-sans-v4-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/instrument-sans-v4-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/instrument-sans-v4-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/instrument-sans-v4-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/instrument-sans-v4-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* instrument-sans-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/instrument-sans-v4-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* overpass-mono-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/overpass-mono-v21-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/overpass-mono-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-mono-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/overpass-mono-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-mono-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/overpass-mono-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/overpass-mono-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
